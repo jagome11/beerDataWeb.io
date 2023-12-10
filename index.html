@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Consultas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados de Consultas</h1>
+
+    <!-- Aquí podrías agregar contenido dinámico con JavaScript -->
+
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo Electrónico</th>
+                <!-- Agrega más encabezados según tu esquema de base de datos -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se mostrarán los resultados de las consultas -->
+        </tbody>
+    </table>
+
+    <script>
+        // Aquí podrías agregar código JavaScript para obtener y mostrar datos desde la base de datos.
+        // Puedes utilizar tecnologías como Fetch, AJAX, o bibliotecas como jQuery para realizar las consultas.
+        // Este es solo un ejemplo básico.
+        // Por ejemplo:
+        // fetch('tu_endpoint_de_api')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         // Manipula los datos y actualiza la tabla
+        //     })
+        //     .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
