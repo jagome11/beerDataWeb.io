@@ -1,63 +1,205 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de Consultas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-        }
+    <title>
+        BEER DATA
+    </title>
+</head> 
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
 <body>
-    <h1>Resultados de Consultas</h1>
+     
 
-    <!-- Aquí podrías agregar contenido dinámico con JavaScript -->
+        <div class = "containerA">
 
-    <table id="resultsTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Correo Electrónico</th>
-                <!-- Agrega más encabezados según tu esquema de base de datos -->
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Aquí se mostrarán los resultados de las consultas -->
-        </tbody>
-    </table>
+            <div class = "navbar">
+               <!--<img src="./img/logo.png" class ="logo" alt="Main logo"> -->
+                <ul >
+                    <li><a href="#Problem">Beer Data</a></li>
+                    <li><a href="#BigData"> Porque BigData</a> </li>
+                    <li><a href="#Data">Nuestros datos</a></li>
+                    <li><a href="#Manual">Manual usuario</a></li>
+                    <li><a href="#Rendimiento">Rendimiento</a> </li>
+                    <li><a href="#Resultados">Resultados</a> </li>
+                    <li><a href="#Conclusion">Conclusion</a> </li>
+                    <li><a href="#Link">Github</a> </li>
+                </ul>
 
-    <script>
-        // Aquí podrías agregar código JavaScript para obtener y mostrar datos desde la base de datos.
-        // Puedes utilizar tecnologías como Fetch, AJAX, o bibliotecas como jQuery para realizar las consultas.
-        // Este es solo un ejemplo básico.
-        // Por ejemplo:
-        // fetch('tu_endpoint_de_api')
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         // Manipula los datos y actualiza la tabla
-        //     })
-        //     .catch(error => console.error('Error:', error));
-    </script>
+            </div>
+        </div>
+
+
+        <div class ="seccion" id = "Problem">
+            <h2>Nuestro Proyecto</h2>
+            <p>
+                Una gran cantidad de la población mundial consume cerveza frecuentemente. 
+                Para aquellas personas que se quieren introducir más a fondo en el extenso mundo 
+                de la cerveza, presentamos un proyecto en el que analizaremos una base de datos y
+                 sacaremos patrones y estadísticas importantes. Actualmente existen gran cantidad 
+                 de marcas de cerveza, algunas de ellas muy conocidas, pero esto no implica que sean 
+                 las mejores. Con este trabajo queremos aportar un punto de vista menos comercial en el 
+                 que las cervezas se valoren únicamente por su calidad y no por la popularidad. 
+            </p>
+            <div class="borde "></div>
+        </div>
+        
+            
+
+        <div class ="seccion" id= "BigData">
+            <h2>¿Por qué se necesita Big Data?</h2>
+            <p>
+                La subjetividad juega un papel muy importante en este ámbito, cada persona puede tener 
+                una opinión distinta sobre la misma cerveza. Por ello también, en la medida de lo posible, 
+                queremos centralizar mucha información haciendo uso del Big Data, para así generalizar las 
+                múltiples opiniones y facilitar la búsqueda de información al usuario.
+            </p>
+            <div class="borde "></div>
+
+        </div>
+
+        <div class ="seccion" id = "Data">
+            <h2>Nuestros datos</h2>
+            <p>
+                Tratamos con un Dataset con más de millón y medio de reviews entre los años 1998-2011
+                 con cervezas de todo el mundo en donde se encuentra una descripción detallada de cada 
+                 cerveza con caracteírsticas fundamentales como el ABV, sabor, apariencia, aroma...
+            </p>
+            <p>
+                Dataset completo alojado en Drive Dataset con el original obtenido de Kaggle y otro creado 
+                por nosotro, el script se encuentra alojado en la carpeta code llamado Crear_dataset.py en 
+                donde cogiendo todos los aspectos específicos a los que se da una nota de 0-5 (sabor, apariencia, 
+                sensación, aroma, impresión general) se les aplican los siguientes porcentajes:
+            </p>
+            <ul>
+                <li type="disc"> 6% Apariencia</li>
+                <li type="disc"> 24% Aroma</li>
+                <li type="disc"> 40% Sabor</li>
+                <li type="disc"> 10% Sensación</li>
+                <li type="disc"> 20% Impresión general</li>
+            </ul>
+            <div class="borde "></div>
+
+        </div>
+
+
+        <div class ="seccion" id = "Manual">
+            <h2>Manual de usuario para los scripts</h2>
+            <p>Para poder procesar los scripts que hemos desarrollado en un 
+            equipo Ubuntu o en una instancia de Google Cloud, antes deben seguir los siguientes pasos:</p>
+            
+            <h3>Pasos a seguir</h3>
+            <ol class="lista">
+                <li>Instalación de Java</li>
+                <code>$ sudo apt install default-jre </code>
+                <code>$ java -version</code>
+                <li>Instalación de Python</li>
+                <code>$ sudo apt-get update</code>
+                <code>$ sudo apt-get install python3.6</code>
+                <li>Instalación de Spark</li>
+                <code>$ curl -O https://archive.apache.org/dist/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz</code>
+                <code>$ tar xvf spark-3.3.1-bin-hadoop3.tgz</code>
+                <code>$ sudo mv spark-3.3.1-bin-hadoop3 /usr/local/spark</code>
+                <li>Configuración del entorno</li>
+                <code>$ echo 'PATH="$PATH:/usr/local/spark/bin"' >> ~/.profile</code>
+                <code>$ source ~/.profile</code>
+                <li>Instalación de librerias</li>
+                <code>$ sudo apt install python3-pip</code>
+                <li>Comprobación de buena instalación</li>
+                <code>$ spark-submit /usr/local/spark/examples/src/main/python/pi.py 10</code>
+                <p>Si todo se ha instalado correctamente debería salirnos una línea diciendo : Pi is roughly 3.142480
+                    Una vez la instalación se ha efectuado correctamente, ya podemos ejecutar los scripts del proyecto usando el siguiente comando:</p>
+                <code>$ spark-submit "nombre_fichero.py"</code>
+                <li></li>
+            </ol>
+
+            <h3>Instancia en Google Cloud</h3>
+            <ol class="lista">
+                <li>Creación de Cluster en la consola de Cloud</li>
+                <code>$ gcloud dataproc clusters create example-cluster --region europe-west6 --master-boot-disk-size 50GB --worker-boot-disk-size 50GB --enable-component-gateway</code>
+                <li>Creación Bucket</li>
+                <ol>
+                    <li>Ve a Navigation menu () > Cloud Storage > Buckets.</li>
+                    <li>Click CREATE.</li>
+                    <li>Rellena la información del bucket information y click CONTINUE para completar los siguientes pasos</li>
+                    <ol>
+                        <li>Dar nombre al bucket: debe ser único.</li>
+                        <li>Elegir para <b>Location type</b>: Region y para Location: europe-west6 (Zurich).</li>
+                        <li>Elegir para <b>Default Storage Class</b>: Standard.</li>
+                        <li>Habilite <b>Enforce public access prevention on this bucket</b> y elija <b>Uniform for Access control</b>.</li>
+                        <li>Elija <b>None for Protection tools</b>.</li>
+                    </ol>
+                    <li>Click CREATE.</li>
+                </ol>
+                <li>Una vez ya creado el Cluster y el Bucket hay dos formas de ejecutar el código:</li>
+                <ol>
+                    <li>Mediante envios de trabajos desde Cloud Shell:</li>
+                    <code>$ BUCKET=gs://$BEER_DATA_PROJECT</code>
+                    <code>$ gcloud dataproc jobs submit pyspark --cluster example-cluster --region=europe-west6 $BUCKET/<nombre_fichero.py> -- $BUCKET/<nombre_dataset.json> $BUCKET/<nombre_output></code>
+                    <li>Mediantes envios de trabajo desde Cluster's Master Node: Ir a Dataproc > Cluster > Cluster_info > Virtual Machines y entrar en master usando SSH:</li>
+                    <code>$ BUCKET=gs://$GOOGLE_CLOUD_PROJECT</code>
+                    <code>$ spark-submit $BUCKET/wordcount.py $BUCKET/input $BUCKET/output3</code>
+                    <p>Se puede cambiar el número de executors y cores con los que queremos trabajar:</p>
+                    <code>$ spark-submit --num-executors <n_executors> --executor-cores <n_cores> filter_cloud.py</code>
+                </ol>
+            </ol>
+            
+            <div class="borde "></div>
+
+        </div>
+
+
+        <div class ="seccion" id = "Rendimiento">
+            <h2>Grápicos de rendimiento</h2>
+            <div class="borde "></div>
+        </div>
+
+        <div class ="seccion" id = "Resultados">
+            <h2>Resultados</h2>
+            <div class="borde "></div>
+
+        </div>
+
+
+        <div class ="seccion" id = "Conclusion">
+            <h2>Conclusión</h2>
+            <div class="borde "></div>
+        </div>
+
+        
 </body>
+
+
+
+<footer >
+
+    <div class="container_footer">
+
+        
+        <div class="box__footer">
+            <h3>Autores</h3>
+                <h6>Alberto Gómez de Andrés</h6>
+                <h6>Rodrigo Gómez Serrano</h6>
+                <h6>Gabriel Casado Valcárcel</h6>
+                <h6>Javier Gómez Arribas</h6>
+        </div>
+    </div>
+
+    <div id = "Links">
+        <a href="https://github.com/ROGOSE/Beer-Data" target="_blank"> 
+            <img src="./img/github.png" class ="github" alt="Main logo">
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+
+
 </html>
